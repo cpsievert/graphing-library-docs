@@ -24,6 +24,8 @@ fetch:
 	@rm -rf _posts/ggplot2/md
 	@cp -r _upstream_docs/ggplot2 _posts/ggplot2/md
 	@rm -rf _upstream_docs
+	@echo "Removing 'What About Dash?' sections..."
+	@./scripts/remove-dash-sections.sh
 	@echo "Done! R and ggplot2 docs updated."
 
 # Alias for backwards compatibility
