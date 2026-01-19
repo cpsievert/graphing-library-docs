@@ -1,3 +1,7 @@
+{% if page.permalink == "/" %}
+{% comment %} Hide sidebar on landing page {% endcomment %}
+{% else %}
+
 {% if page.url contains "ggplot2" %}
 {% assign language = "ggplot2" %}
 {% elsif page.url contains "r/" %}
@@ -255,3 +259,5 @@
     </div>
 
 </aside>
+
+{% endif %}

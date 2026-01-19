@@ -5,58 +5,126 @@ layout: langindex
 description: Documentation for Plotly's R graphing libraries - plotly.R and ggplotly.
 ---
 
-<header class="--welcome">
+<div class="landing-container">
+
+<header class="--welcome" style="margin-bottom: 30px;">
   <div class="--welcome-body">
     <div class="--title">
       <div class="--body">
-        <h1>Plotly for R Documentation</h1>
-        <p>
-          Interactive, publication-quality graphs with R. This documentation covers
-          both the plotly R package and ggplotly for converting ggplot2 figures.
-        </p>
+        <h1>Plotly for R</h1>
+        <p>Interactive, publication-quality graphs with R</p>
       </div>
     </div>
   </div>
 </header>
 
 <section class="tutorial-content">
-  <div class="row" style="margin-top: 40px;">
-    <div class="six columns">
-      <a href="/r/" style="text-decoration: none;">
-        <div style="border: 1px solid #ddd; padding: 30px; border-radius: 8px; text-align: center;">
-          <img src="/all_static/images/r.png" alt="R" style="height: 80px; margin-bottom: 20px;" />
-          <h3 style="margin: 0;">Plotly R Library</h3>
-          <p style="color: #666; margin-top: 10px;">
-            Create interactive charts directly with plotly's R API
-          </p>
-        </div>
-      </a>
-    </div>
-    <div class="six columns">
-      <a href="/ggplot2/" style="text-decoration: none;">
-        <div style="border: 1px solid #ddd; padding: 30px; border-radius: 8px; text-align: center;">
-          <img src="/all_static/images/ggplot2.png" alt="ggplot2" style="height: 80px; margin-bottom: 20px;" />
-          <h3 style="margin: 0;">ggplotly</h3>
-          <p style="color: #666; margin-top: 10px;">
-            Convert ggplot2 figures to interactive plotly charts
-          </p>
-        </div>
-      </a>
-    </div>
-  </div>
-
-  <div style="margin-top: 40px; text-align: center;">
-    <h4>API Reference</h4>
-    <p>
-      <a href="/r/reference/">R Figure Reference</a> - Complete reference for all trace types and layout options
-    </p>
-  </div>
-
-  <div style="margin-top: 40px; padding: 20px; background: #f5f5f5; border-radius: 8px;">
-    <h4>Resources</h4>
-    <ul>
-      <li><a href="https://github.com/plotly/plotly.R" target="_blank">plotly.R on GitHub</a></li>
-      <li><a href="https://cran.r-project.org/package=plotly" target="_blank">plotly on CRAN</a></li>
-    </ul>
+  <div class="landing-grid">
+    <a href="/r/getting-started/" class="landing-card">
+      <span class="landing-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+        </svg>
+      </span>
+      <h3>Getting Started</h3>
+      <p>Installation and first steps with plotly</p>
+    </a>
+    <a href="/ggplot2/" class="landing-card">
+      <span class="landing-card-icon">
+        <img src="/all_static/images/icon-ggplot2.png" alt="ggplot2" />
+      </span>
+      <h3>ggplotly</h3>
+      <p>Convert ggplot2 figures to interactive charts</p>
+    </a>
+    <a href="/r/" class="landing-card">
+      <span class="landing-card-icon">
+        <img src="/all_static/images/icon-r.png" alt="R" />
+      </span>
+      <h3>Plotly R Library</h3>
+      <p>Create interactive charts with plotly's R API</p>
+    </a>
+    <a href="/r/reference/" class="landing-card">
+      <span class="landing-card-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+          <line x1="8" y1="7" x2="16" y2="7"></line>
+          <line x1="8" y1="11" x2="14" y2="11"></line>
+        </svg>
+      </span>
+      <h3>API Reference</h3>
+      <p>Complete reference for traces and layout</p>
+    </a>
   </div>
 </section>
+
+</div>
+
+<style>
+  /* Override layout to center content when no sidebar */
+  .--page .--page-body {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .landing-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .landing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 600px) {
+    .landing-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  .landing-card {
+    display: block;
+    position: relative;
+    border: 1px solid #444;
+    padding: 30px 25px;
+    padding-right: 100px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: border-color 0.2s, background-color 0.2s;
+    min-height: 80px;
+  }
+  .landing-card:hover {
+    border-color: #119dff;
+    background-color: rgba(17, 157, 255, 0.05);
+  }
+  .landing-card-icon {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    transition: opacity 0.2s;
+  }
+  .landing-card-icon svg {
+    width: 72px;
+    height: 72px;
+    color: #119dff;
+  }
+  .landing-card-icon img {
+    width: 72px;
+    height: 72px;
+    object-fit: contain;
+  }
+  .landing-card:hover .landing-card-icon {
+    opacity: 0.8;
+  }
+  .landing-card h3 {
+    margin: 0 0 8px 0;
+    color: #119dff;
+    font-size: 18px;
+  }
+  .landing-card p {
+    margin: 0;
+    color: #888;
+    font-size: 14px;
+  }
+</style>
