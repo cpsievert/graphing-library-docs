@@ -469,7 +469,7 @@
 {%- for page in languagelist -%}
 {% if page.display_as == "layout_opt" %}
 {% if counter == 6 %}</ul></div><div class="six columns"><ul>{% endif %}
-<li><a class="no-list-style" href="/{{page.permalink}}">{{page.name}}</a></li>
+<li><a class="no-list-style" href="{{ site.baseurl }}/{{page.permalink}}">{{page.name}}</a></li>
 {% assign counter=counter | plus:1 %}
 {% endif %}
 {%- endfor -%}
@@ -489,7 +489,7 @@
             {% if page.display_as == "advanced_opt" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -512,7 +512,7 @@
             {% if page.display_as == "style_opt" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -535,7 +535,7 @@
             {% if page.display_as == "layout_opt" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -558,7 +558,7 @@
             {% if page.display_as == "legacy_charts" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -581,7 +581,7 @@
             {% if page.display_as == "databases" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
 
                 </a>
@@ -605,7 +605,7 @@
             {% if page.display_as == "report_generation" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
 
                 </a>
@@ -629,7 +629,7 @@
             {% if page.display_as == "tutorial" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
 				</a>
             </li>
@@ -652,7 +652,7 @@
             {% if page.display_as == "get_request" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -675,7 +675,7 @@
             {% if page.display_as == "mathematics" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -699,7 +699,7 @@
             {% if page.display_as == "statistics" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -722,7 +722,7 @@
             {% if page.display_as == "peak-analysis" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>
@@ -745,7 +745,7 @@
             {% if page.display_as == "signal-analysis" %}
 
             <li class="--grid-item">
-                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}/{{page.permalink}}{% endif %}">
+                <a href="{% if page.permalink contains 'http' %}{{page.permalink}}{% else %}{{ site.baseurl }}/{{page.permalink}}{% endif %}">
                     <div class="--item-meta"><span>{{page.name}}</span></div>
                 </a>
             </li>

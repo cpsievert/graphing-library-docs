@@ -90,21 +90,21 @@
                     <!-- Reference Pages -->
                     {% if page.language == "r" %}
                     <li class="--sidebar-item">
-                        <a href="/r/reference/index/" class="js-splash--navigation-item">Figure Reference</a>
+                        <a href="{{ site.baseurl }}/r/reference/index/" class="js-splash--navigation-item">Figure Reference</a>
                     </li>
                     {% endif %}
 
                     <!-- R Specific -->
                     {% if page.language == "r"%}
                     <li class="--sidebar-item">
-                        <a href="/ggplot2/" class="js-splash--navigation-item">ggplot2 integration</a>
+                        <a href="{{ site.baseurl }}/ggplot2/" class="js-splash--navigation-item">ggplot2 integration</a>
                     </li>
                     {% endif %}
 
                     <!-- ggplot2 Specific -->
                     {% if page.language == "ggplot2"%}
                     <li class="--sidebar-item">
-                        <a href="/r/" class="js-splash--navigation-item">Plotly R library</a>
+                        <a href="{{ site.baseurl }}/r/" class="js-splash--navigation-item">Plotly R library</a>
                     </li>
                     {% endif %}
 
