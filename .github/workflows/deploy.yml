@@ -34,6 +34,9 @@ jobs:
         with:
           python-version: '3.11'
 
+      - name: Fetch R/ggplot2 docs from plotly.r-docs
+        run: make fetch
+
       - name: Validate front-matter
         run: python front-matter-ci.py _posts
 

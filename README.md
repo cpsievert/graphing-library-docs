@@ -35,11 +35,13 @@ bundle install
 
 ### Fetch Documentation Content
 
-Pull the latest R/ggplot2 documentation from upstream:
+Pull the latest R/ggplot2 documentation from the [plotly.r-docs](https://github.com/plotly/plotly.r-docs) `built` branch:
 
 ```bash
-make fetch_upstream_files
+make fetch
 ```
+
+This clones the built documentation and copies it into `_posts/r/md/` and `_posts/ggplot2/md/`.
 
 ### Run Locally
 
