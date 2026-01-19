@@ -15,13 +15,13 @@ This repository builds a Jekyll site containing documentation for:
 | Repository | Description |
 |------------|-------------|
 | [plotly/plotly.R](https://github.com/plotly/plotly.R) | The plotly R package source code. The built documentation site is hosted on this repo's GitHub Pages. |
-| [plotly/plotly.r-docs](https://github.com/plotly/plotly.r-docs) | Source for R and ggplot2 documentation content. Fetched at build time via `make fetch_upstream_files`. |
+| [plotly/plotly.r-docs](https://github.com/plotly/plotly.r-docs) | Source for R and ggplot2 documentation content. Fetched at build time via `make fetch`. |
 
 ## Local Development
 
 ### Prerequisites
 
-- Ruby (3.1 recommended)
+- Ruby (2.7.4 recommended, matching [GitHub Pages](https://pages.github.com/versions/))
 - Bundler
 
 ### Setup
