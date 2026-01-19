@@ -1,0 +1,4 @@
+# Production config for GitHub Pages deployment at plotly.github.io/plotly.R/
+# Usage: bundle exec jekyll build --config _config.yml,_config_production.yml
+
+baseurl: /plotly.R
