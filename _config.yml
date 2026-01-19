@@ -7,14 +7,11 @@ plugins:
 # Assets
 # ---
 imgurl: https://images.plot.ly/plotly-documentation/
-#stylesheet: https://s3-us-west-1.amazonaws.com/plotly-tutorials/assets/css/api/main.css
-
 
 # ---
 # Excludes
 # ---
-#exclude: ['*.Rmd','_posts/2015-09-09-matlab-reference.html','_posts/2015-09-06-r-reference.html','_posts/2015-09-06-python-reference.html','_posts/2015-08-19-plotly_js-reference.html','_posts/2015-04-05-ggplot2-index.html','_posts/2015-04-05-julia-index.html,'_posts/2015-04-05-node_js-index.html','_posts/2015-04-05-plotly_js-index.html','_posts/2015-04-05-plotlyjs-function-reference.md','_posts/2015-07-13-eula_index.html','_posts/2015-07-26-index.html','_posts/2015-07-30-r-index.Rmd','_posts/2015-07-30-r-index.md','_posts/2015-08-20-research-box-index.html','_posts/ggplot2','_posts/julia','_posts/nodejs','_posts/plotly_js','_posts/r','_posts/tutorials','_posts/user_guide_python']
-exclude: [_posts/temp, '*.Rmd', vendor, node_modules] #'_posts/python/chart-studio/*.md']
+exclude: ['*.Rmd', vendor, node_modules]
 
 # ---
 # Markdown / Syntax
@@ -26,30 +23,18 @@ redcarpet:
   extensions: ["tables", "fenced_code_blocks"]
 
 # ---
-# Algolia Search
+# Algolia Search (R docs)
 # ---
-# Run make search_readme for more information on search
+# Run: bundle exec jekyll algolia push
 
 algolia:
   application_id: '7EK9KHJW8M'
-  index_name:     'python_docs'
+  index_name:     'r_docs'
   read_only_api_key: '4dae07ded6a721de73bde7356eec9280'
   excluded_files:
-    # - '*.ipynb'
     - '*.png'
     - '*.Rmd'
     - '*.R'
-    - '_posts/dashboards'
-    - '_posts/ggplot2'
-    - '_posts/julia'
-    - '_posts/matlab'
-    - '_posts/misc'
-    - '_posts/nodejs'
-    - '_posts/plotly_js'
-    - '_posts/r'
-    - '_posts/reference_pages'
-    - '_posts/scala'
-    - '_posts/temp'
   settings:
     attributesToIndex:
       - name
