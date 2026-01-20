@@ -48,8 +48,10 @@ $(function(config) {
       transformData: {
         item: function(hit) {
           // Prepend baseurl to permalink for GitHub Pages subdirectory deployment
-          if (hit.permalink && config.baseurl) {
-            hit.permalink = config.baseurl + hit.permalink;
+          if (hit.permalink) {
+            // Ensure permalink starts with /
+            var permalink = hit.permalink.charAt(0) === '/' ? hit.permalink : '/' + hit.permalink;
+            hit.permalink = (config.baseurl || '') + permalink;
           }
           hit.raw = JSON.stringify(hit, null, 2);
           return hit;
