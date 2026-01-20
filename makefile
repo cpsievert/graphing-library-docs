@@ -39,7 +39,7 @@ build:
 
 search:
 	@echo "Updating r_docs search index"
-	bundle exec jekyll algolia push
+	bundle exec jekyll algolia
 
 clean:
 	rm -rf _site _upstream_docs

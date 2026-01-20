@@ -1,7 +1,7 @@
 plugins:
 - jekyll-redirect-from
 - jekyll-sitemap
-- algoliasearch-jekyll
+- jekyll-algolia
 
 # ---
 # Assets
@@ -25,7 +25,7 @@ redcarpet:
 # ---
 # Algolia Search (R docs)
 # ---
-# Run: bundle exec jekyll algolia push
+# Run: bundle exec jekyll algolia
 
 algolia:
   application_id: 'X2BCODRMHJ'
@@ -36,7 +36,7 @@ algolia:
     - '*.Rmd'
     - '*.R'
   settings:
-    attributesToIndex:
+    searchableAttributes:
       - name
       - description
       - title
