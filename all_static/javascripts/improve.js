@@ -10,7 +10,11 @@
     });
   };
   db.switchMode = function () {
-    const theme = localStorage.getItem('theme');
+    var theme = localStorage.getItem('theme');
+    // If no theme saved, check system preference
+    if (!theme) {
+      theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode';
+    }
     if (theme === "dark-mode") {
       // $("body").addClass("dark-mode");
       javascript: document.querySelectorAll(".js-plotly-plot").forEach(function (gd) {

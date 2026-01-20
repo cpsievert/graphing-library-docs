@@ -17,12 +17,16 @@
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
 
   <script>
-    const theme = localStorage.getItem('theme');
-    if (theme === "dark-mode") {
-      var root = document.getElementsByTagName('html')[0]; // '0' to assign the first (and only `HTML` tag)
-      root.setAttribute('class', 'dark-mode');
-    }
-
+    (function() {
+      var theme = localStorage.getItem('theme');
+      // If no theme saved, check system preference
+      if (!theme) {
+        theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark-mode' : 'light-mode';
+      }
+      if (theme === 'dark-mode') {
+        document.documentElement.classList.add('dark-mode');
+      }
+    })();
   </script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" crossorigin="anonymous">
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" crossorigin="anonymous"></script>
