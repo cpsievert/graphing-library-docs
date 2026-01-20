@@ -28,9 +28,9 @@ redcarpet:
 # Run: bundle exec jekyll algolia push
 
 algolia:
-  application_id: '7EK9KHJW8M'
+  application_id: 'X2BCODRMHJ'
   index_name:     'r_docs'
-  read_only_api_key: '4dae07ded6a721de73bde7356eec9280'
+  read_only_api_key: '24b52859fd9a7fb10adcf642f4ae59a5'
   excluded_files:
     - '*.png'
     - '*.Rmd'
