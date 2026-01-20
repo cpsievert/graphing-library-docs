@@ -6,6 +6,7 @@ gem 'octopress'
 gem 'rake'
 gem 'jekyll-sitemap'
 gem 'percy-cli'
+gem 'webrick'
 
 group :jekyll_plugins do
   gem 'octopress-debugger'

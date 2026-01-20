@@ -325,6 +325,7 @@ GEM
     unf_ext (0.0.9.1)
     unicode-display_width (1.8.0)
     verbal_expressions (0.1.5)
+    webrick (1.9.2)
 
 PLATFORMS
   arm64-darwin-23
@@ -341,6 +342,7 @@ DEPENDENCIES
   octopress-debugger
   percy-cli
   rake
+  webrick
 
 BUNDLED WITH
    2.4.22
